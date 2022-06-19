@@ -1,8 +1,24 @@
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import "../styles/styles.css"
 
 const Inicio = ({setListado,listado}) => {
 
+  useEffect(() => {
+    const ashe = async () =>{
+      try {
+        const url = "http://localhost:4000/clientes"
+
+        const agregar = await fetch(url)
+        const resultado = await agregar.json()
+          setListado(resultado)
+        
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    ashe()
+  }, [])
+  
 
   return (
     <div>

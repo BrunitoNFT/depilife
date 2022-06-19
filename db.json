@@ -1,0 +1,49 @@
+{
+  "clientes": [
+    {
+      "nombre": "asdasd",
+      "dni": "24124141",
+      "correo": "pijnwer@asdad",
+      "listaFin": [],
+      "radio": "",
+      "id": 1
+    },
+    {
+      "nombre": "sadsada",
+      "dni": "12312312",
+      "correo": "obasdoajs@jaskd",
+      "listaFin": [
+        [
+          "2",
+          "0"
+        ],
+        [
+          "4",
+          "1"
+        ],
+        [
+          "4",
+          "2"
+        ]
+      ],
+      "radio": "credito",
+      "id": 2
+    },
+    {
+      "nombre": "asdsad",
+      "dni": "234234234",
+      "correo": "asdasd@sdads",
+      "listaFin": [],
+      "radio": "",
+      "id": 3
+    },
+    {
+      "nombre": "kkkkkkkk",
+      "dni": "12341324",
+      "correo": "lkjasdkjsa@aasd",
+      "listaFin": [],
+      "radio": "",
+      "id": 4
+    }
+  ]
+}

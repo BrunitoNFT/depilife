@@ -3,9 +3,12 @@ import Servicios from './Servicios.jsx'
 import { useState,useEffect } from 'react'
 import "../styles/styles.css"
 import swal from 'sweetalert';
+import {useNavigate} from "react-router-dom";
 
 
 const Form = ({setListado,listado}) => {
+
+    const navigate = useNavigate()
 
     const [cantidadServicios, setCantidadServicios] = useState(0)
     const [servicios,setServicios] = useState([])
@@ -122,7 +125,28 @@ const Form = ({setListado,listado}) => {
         }
         setErrorRadio([false,""])
 
-
+        const awa = async p =>{
+          try {
+            const url = "http://localhost:4000/clientes"
+  
+            const agregar = await fetch(url,{
+              method: "POST",
+              body:JSON.stringify({nombre,dni,correo,listaFin,radio}),
+              headers:{
+                "Content-Type":"application/json"
+              }
+            })
+            const resultado = await agregar.json()
+            console.log(resultado)
+            navigate("/")
+            
+          } catch (error) {
+            console.log(error)
+          }
+  
+        }
+        awa()
+        
         swal({
           title: "Cliente Nuevo!",
           text: "Agregado Exitosamente",
